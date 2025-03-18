@@ -2,10 +2,10 @@ spring:
   application:
     name: supermercado-api
   datasource:
-    url:
-    username:
-    password:
-    driver-class-name:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true
     hibernate:
