@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: supermercado-api
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format-sql: true
+
+logging:
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} | %clr(%-5level) | %clr(%-40.40logger){magenta} | %msg%n'
+  file:
+    name: app.log
