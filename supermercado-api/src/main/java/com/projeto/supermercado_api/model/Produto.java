@@ -3,35 +3,43 @@ package com.projeto.supermercado_api.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "produto")
 @Getter
 @Setter
 @EntityListeners(AuditingEntityListener.class)
-public class Usuario {
+public class Produto {
 
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(name = "email", unique = true, nullable = false)
-    private String email;
+    @ManyToOne
+    @JoinColumn(name = "categora_id")
+    private Categoria categoria;
 
-    @Column(name = "senha", nullable = false)
-    @ToString.Exclude
-    private String senha;
+    @Column(name = "preco_unitario", nullable = false, precision = 18, scale = 2)
+    private BigDecimal precoUnitario;
+
+    @Column(name = "qtd_estoque", nullable = false)
+    private Integer qtdEstoque;
+
+    @Column(name = "codigo_barras", nullable = false, unique = true)
+    private String codigoBarras;
+
+    @Column(name = "qtd_minima_estoque", nullable = false)
+    private Integer qtdMinEstoque;
 
     @CreatedDate
     @Column(name = "data_cadastro")
@@ -40,5 +48,4 @@ public class Usuario {
     @LastModifiedDate
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
-
 }
