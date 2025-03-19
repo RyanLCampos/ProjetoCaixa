@@ -5,7 +5,8 @@
   --azul-claro: #9CC4E4;
   --azul-escuro: #1B325F;
   --vermelho: #F26C4F;
-  --cinza: #EEEEEE
+  --cinza: #EEEEEE;
+  --verde: #539A53;
 }
 
 * {
@@ -15,4 +16,12 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.tela-container {
+  background-color: var(--branco);
+  padding: 32px 64px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  min-height: 75vh;
 }

@@ -1,0 +1,93 @@
+.caixa h1 {
+    font-size: 32px;
+    color: var(--azul-escuro);
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.caixa--inputs form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixa--inputs form label {
+    color: black;
+    font-size: 24px;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.caixa--inputs-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.caixa--inputs-inputs div {
+    display: flex;
+    align-items: center;
+}
+
+.caixa--inputs form input {
+    background-color: var(--azul-gelo);
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+}
+
+.input-cod-barras {
+    width: 300px;
+}
+
+.input-quantidade {
+    width: 100px;
+}
+
+.caixa--inputs-botoes {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.buscar-nome {
+    background-color: var(--branco);
+    color: var(--azul-medio);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    padding: 3px 24px;
+    border: 2px solid var(--azul-medio);
+    transition: 0.25s;
+    width: 300px;
+}
+
+.buscar-nome:hover {
+    cursor: pointer;
+    background-color: var(--azul-medio);
+    color: var(--branco);
+}
+
+.adicionar {
+    background-color: var(--branco);
+    color: var(--verde);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    padding: 3px 24px;
+    border: 2px solid var(--verde);
+    transition: 0.25s;
+    width: 300px;
+}
+
+.adicionar:hover {
+    cursor: pointer;
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.caixa--venda-container {
+    margin-top: 20px;
+    background-color: var(--azul-gelo);
+}

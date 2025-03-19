@@ -1,4 +1,10 @@
 .container {
   padding: 32px;
   background-color: var(--cinza);
+  min-height: 100vh;
+}
+
+.shadow-container {
+  box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.253);
+  border-radius: 16px;
 }

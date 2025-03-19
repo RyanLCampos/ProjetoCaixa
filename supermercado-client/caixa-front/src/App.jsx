@@ -8,11 +8,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <Cabecalho />
-        <Routes>
-          <Route path="/" element={<Painel />} />
-          <Route path="/caixa" element={<Caixa />}/>
-        </Routes>
+        <div className="shadow-container">
+          <Cabecalho />
+          <Routes>
+            <Route path="/" element={<Painel />} />
+            <Route path="/caixa" element={<Caixa />}/>
+          </Routes>
+        </div>
+        
       </div>
     </BrowserRouter>
   )
