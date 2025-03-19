@@ -33,10 +33,6 @@ public class Usuario {
     @ToString.Exclude
     private String senha;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "cargo")
-    private String cargo;
-
     @CreatedDate
     @Column(name = "data_cadastro")
     private LocalDateTime dataCadastro;
