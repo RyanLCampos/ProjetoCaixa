@@ -90,4 +90,86 @@
 .caixa--venda-container {
     margin-top: 20px;
     background-color: var(--azul-gelo);
+    border-radius: 16px;
+    padding: 12px 60px;
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.caixa--venda-container-legenda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.legenda-esquerda {
+    color: var(--azul-medio);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.legenda-direita {
+    color: var(--azul-medio);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.caixa--venda-container--produtos {
+    margin-top: 24px;
+}
+
+.caixa--forma-de-pagamento {
+    margin-top: 18px;
+}
+
+.caixa--forma-de-pagamento form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div--forma-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div--forma-pagamento label {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--azul-escuro);
+}
+
+.div--forma-pagamento select {
+    background-color: var(--azul-gelo);
+    padding: 5px;
+    border-radius: 12px;
+    border: none;
+    min-width: 400px;
+}
+
+.botao-vender {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 3px 24px;
+    border: none;
+    transition: 0.25s;
+    width: 250px;
+}
+
+.botao-vender:hover {
+    cursor: pointer;
+    background-color: #3b6d3b;
 }
