@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Painel from "./pages/Painel";
 import Caixa from "./pages/Caixa";
 import Cabecalho from "./components/Cabecalho";
+import Estoque from "./pages/Estoque";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Painel />} />
             <Route path="/caixa" element={<Caixa />}/>
+            <Route path="/estoque" element={<Estoque />}/>
           </Routes>
         </div>
         
