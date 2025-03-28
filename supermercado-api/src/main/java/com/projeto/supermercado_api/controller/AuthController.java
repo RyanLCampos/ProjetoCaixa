@@ -5,7 +5,6 @@ import com.projeto.supermercado_api.controller.dto.ResponseDTO;
 import com.projeto.supermercado_api.controller.dto.UsuarioDTO;
 import com.projeto.supermercado_api.controller.mappers.UsuarioMapper;
 import com.projeto.supermercado_api.model.Usuario;
-import com.projeto.supermercado_api.repository.UsuarioRepository;
 import com.projeto.supermercado_api.security.TokenService;
 import com.projeto.supermercado_api.service.UsuarioService;
 import io.swagger.v3.oas.annotations.Operation;
