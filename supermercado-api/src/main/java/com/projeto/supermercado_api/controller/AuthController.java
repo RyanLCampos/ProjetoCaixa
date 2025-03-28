@@ -79,11 +79,7 @@ public class AuthController implements GenericController{
 
         if(usuarioOptional.isEmpty()){
 
-            log.info("DTO recebido para cadastro: {}", dto);
-
             Usuario usuario = mapper.toEntity(dto);
-
-            log.info("Entidade convertida para cadastro: {}", usuario);
 
             usuarioService.salvar(usuario);
 
