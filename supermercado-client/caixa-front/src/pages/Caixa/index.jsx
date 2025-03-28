@@ -1,4 +1,5 @@
 import "./Caixa.css";
+import ProdutoCaixa from "../../components/ProdutoCaixa";
 
 function Caixa() {
     return (
@@ -23,7 +24,7 @@ function Caixa() {
                     </div>
                 </form>
             </div>
-            <scroll className="caixa--venda-container">
+            <div className="caixa--venda-container">
                 <div className="caixa--venda-container-legenda">
                     <div className="legenda-esquerda">
                         <span>Código de barras</span>
@@ -36,9 +37,33 @@ function Caixa() {
                         <span>Ações</span>
                     </div>
                 </div>
-            </scroll>
+                <div className="caixa--venda-container--produtos">
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                    <ProdutoCaixa codBarras={"A1F98AD"} nome="Coca Cola 2L" quantidade={10} preco={50}/>
+                </div>
+            </div>
             <div className="caixa--forma-de-pagamento">
+                <form>
+                    <div className="div--forma-pagamento">
+                        <label htmlFor="formaPagamento">Forma de pagamento</label>
+                        <select name="formaPagamento" id="formaPagamento">
+                            <option value="0">Pix</option>
+                            <option value="1">Dinheiro</option>
+                            <option value="2">Cartão</option>
+                        </select>
+                    </div>
 
+                    <button type="submit" className="botao-vender">Vender</button>
+                </form>
             </div>
         </div>
     )

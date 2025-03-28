@@ -1,0 +1,41 @@
+.produto-caixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--azul-escuro);
+}
+
+.produto-caixa--esquerda {
+    font-size: 24px;
+    color: var(--azul-escuro);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: 32%;
+    justify-content: space-between;
+}
+
+.produto-caixa--direita {
+    font-size: 24px;
+    color: var(--azul-escuro);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.produto-caixa--direita-acoes {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.produto-caixa--direita-acoes button {
+    background-color: transparent;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
