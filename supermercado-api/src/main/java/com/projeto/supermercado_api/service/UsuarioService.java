@@ -28,6 +28,10 @@ public class UsuarioService {
         usuarioRepository.save(usuario);
     }
 
+    public Optional<Usuario> obterPorEmail(String email){
+        return usuarioRepository.findByEmail(email);
+    }
+
     public Optional<Usuario> obterPorId(UUID id){
         return usuarioRepository.findById(id);
     }
