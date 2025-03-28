@@ -18,3 +18,16 @@ logging:
     console: '%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} | %clr(%-5level) | %clr(%-40.40logger){magenta} | %msg%n'
   file:
     name: app.log
+  level:
+    root: warn
+    com:
+      projeto: trace
+    org:
+      springframework:
+        web: debug
+        security: debug
+
+api:
+  security:
+    token:
+      secret: ${AUTH_SECRET}
