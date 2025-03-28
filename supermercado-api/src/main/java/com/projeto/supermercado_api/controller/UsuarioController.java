@@ -11,11 +11,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -28,26 +26,6 @@ public class UsuarioController implements GenericController{
 
     private final UsuarioService usuarioService;
     private final UsuarioMapper mapper;
-
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Salvar", description = "Cadastrar novo usuário.")
-    @ApiResponses({
-            @ApiResponse(responseCode = "201", description = "Cadastrado com sucesso."),
-            @ApiResponse(responseCode = "422", description = "Erro de validação."),
-            @ApiResponse(responseCode = "409", description = "Usuário já cadastrado.")
-    })
-    public ResponseEntity<Void> salvar(@RequestBody @Valid UsuarioDTO usuarioDTO) {
-        log.info("Cadastrando novo usuário: {}", usuarioDTO.nome());
-
-        Usuario usuario = mapper.toEntity(usuarioDTO);
-
-        usuarioService.salvar(usuario);
-
-        URI location = gerarHeaderLocation(usuario.getId());
-
-        return ResponseEntity.created(location).build();
-    }
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Deletar", description = "Deleta autor existente por ID.")
