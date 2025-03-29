@@ -24,6 +24,9 @@ public class Categoria {
     @Column(nullable = false, unique = true)
     private String nome;
 
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
+
     @CreatedDate
     @Column(name = "data_cadastro")
     private LocalDateTime dataCadastro;

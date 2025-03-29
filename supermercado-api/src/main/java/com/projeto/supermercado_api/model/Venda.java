@@ -33,6 +33,7 @@ public class Venda {
     @Column(name = "data_venda", updatable = false, nullable = false)
     private LocalDateTime dataVenda;
 
-    @Column(name = "tipo_pagamento", nullable = false)
-    private String tipoPagamento;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "forma_pagamento", nullable = false)
+    private FormaPagamento formaPagamento;
 }

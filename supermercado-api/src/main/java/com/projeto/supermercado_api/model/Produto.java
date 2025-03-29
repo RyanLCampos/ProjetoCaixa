@@ -26,7 +26,7 @@ public class Produto {
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "categora_id")
+    @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
     @Column(name = "preco_unitario", nullable = false, precision = 18, scale = 2)
@@ -35,11 +35,15 @@ public class Produto {
     @Column(name = "qtd_estoque", nullable = false)
     private Integer qtdEstoque;
 
-    @Column(name = "codigo_barras", nullable = false, unique = true)
-    private String codigoBarras;
+    @Column(name = "codigo_barra", nullable = false, unique = true)
+    private String codigoBarra;
 
     @Column(name = "qtd_minima_estoque", nullable = false)
     private Integer qtdMinEstoque;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
 
     @CreatedDate
     @Column(name = "data_cadastro")
