@@ -2,9 +2,11 @@ import ProdutoEstoque from "../../components/ProdutoEstoque";
 import "./Estoque.css";
 import { useState } from "react";
 import ModalAddProduto from "../../components/ModalAddProduto";
+import ModalEditProduto from "../../components/ModalEditProduto";
 
 function Estoque() {
     const [isVisble1, setIsVisible1] = useState(false);
+    const [isVisible2, setIsVisible2] = useState(false);
 
     return (
         <div className="tela-container estoque">
@@ -36,15 +38,18 @@ function Estoque() {
             </div>
 
             <div className="estoque__lista-produtos">
-                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
-                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
-                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
-                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
-                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
+                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50} setIsVisible2={setIsVisible2}/>
+                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50} setIsVisible2={setIsVisible2}/>
+                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50} setIsVisible2={setIsVisible2}/>
+                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50} setIsVisible2={setIsVisible2}/>
+                <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50} setIsVisible2={setIsVisible2}/>
             </div>
 
             {
                 isVisble1 ? <ModalAddProduto setIsVisible1={setIsVisible1}/> : null
+            }
+            {
+                isVisible2 ? <ModalEditProduto setIsVisible2={setIsVisible2}/> : null
             }
         </div>
     )
