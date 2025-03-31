@@ -1,8 +1,11 @@
 import ProdutoEstoque from "../../components/ProdutoEstoque";
 import "./Estoque.css";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import ModalAddProduto from "../../components/ModalAddProduto";
 
 function Estoque() {
+    const [isVisble1, setIsVisible1] = useState(false);
+
     return (
         <div className="tela-container estoque">
             <h1 className="titulo">Estoque</h1>
@@ -16,7 +19,7 @@ function Estoque() {
                     <label htmlFor="filtros">Adicionar filtros</label>
                 </div>
 
-                <Link to="/cadastrar-produto" className="botao__cadastrar-produto">Cadastrar Produto</Link>
+                <button className="botao__cadastrar-produto" onClick={() => setIsVisible1(true)}>Cadastrar Produto</button>
             </div>
 
             <div className="estoque__legenda">
@@ -39,6 +42,10 @@ function Estoque() {
                 <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
                 <ProdutoEstoque codBarras={"A1F98AD"} nome="Coca Cola 2L" categoria={"bebidas"} quantidade={10} preco={50}/>
             </div>
+
+            {
+                isVisble1 ? <ModalAddProduto setIsVisible1={setIsVisible1}/> : null
+            }
         </div>
     )
 }

@@ -1,0 +1,105 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-add-produto {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 750px;
+    max-width: 90%;
+  }
+  
+  .modal--add-produto__cancelar {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--azul-escuro);
+  }
+
+  .modal-add-produto h1 {
+    text-align: center;
+    color: var(--azul-escuro);
+    font-weight: bold;
+    font-size: 32px;
+    margin: 48px 0;
+  }
+  
+  .modal-add-produto form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 10px;
+  }
+  
+  .div-linhas {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .div-linhas__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-add-produto label {
+    color: var(--azul-medio);
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .modal-add-produto input,
+  .modal-add-produto select {
+    background-color: var(--azul-gelo);
+    border-radius: 14px;
+    border: none;
+    padding: 10px;
+  }
+  
+  .input-categoria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .input-categoria button {
+    color: var(--preto);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+  }
+  
+  .modal-add-produto button[type="submit"] {
+    background-color: #3A89C9;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .25s;
+  }
+  
+  .modal-add-produto button[type="submit"]:hover {
+    background-color: #285d88;
+  }
+  
